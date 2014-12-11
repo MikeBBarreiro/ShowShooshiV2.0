@@ -8,7 +8,7 @@
     $('#toggle_userSearch').click(geocode);
     $('#toggle_userSearch').click(function(){
       var mexicanIcon = $(".Sushi").attr('src',"assets/img/yummmmmms.png");
-      mexicanIcon.addClass('animated.fadeInDown');
+      mexicanIcon.addClass('animated fadeInDown');
     });
   });
 

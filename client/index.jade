@@ -55,7 +55,7 @@ html(ng-app='mean-template', lang='en')
       // main content
       div.ip-main
         h2 Find a place to eat &nbsp;
-          span.hue-color-wheel Sushi!
+          span.hue-color-wheel {{occupation}}
         //- .row
         //-   .col-xs-4
         //-     input#lat1(ng-model='Lat1', type="hidden", name="lat")
@@ -147,16 +147,16 @@ html(ng-app='mean-template', lang='en')
               input.form-control#type(type='text', name='type', placeholder='Type')
           .col-xs-4
             
-  .row
-  .col-xs-12
-    section.color-4
-      nav.cl-effect-11
-        a.footerButton.wp4(href='https://github.com/MikeBBarreiro', data-hover='GitHub' style='-webit-animation-delay: 0.5s;') Github
-        a.footerButton.wp4(href='https://www.linkedin.com/profile/view?id=221590218&trk=nav_responsive_tab_profile_pic', data-hover='LinkedIn' style='-webkit-animation-delay: 0.35s;') LinkedIn
-        a.footerButton.wp4(href='https://twitter.com/l8MikeBl8', data-hover='Twitter' style='-webkit-animation-delay: 0.15s;') Twitter
+    .row
+    .col-xs-12
+      section.color-4
+        nav.cl-effect-11
+          a.footerButton.wp4(href='https://github.com/MikeBBarreiro', data-hover='GitHub' style='-webit-animation-delay: 0.5s;') Github
+          a.footerButton.wp4(href='https://www.linkedin.com/profile/view?id=221590218&trk=nav_responsive_tab_profile_pic', data-hover='LinkedIn' style='-webkit-animation-delay: 0.35s;') LinkedIn
+          a.footerButton.wp4(href='https://twitter.com/l8MikeBl8', data-hover='Twitter' style='-webkit-animation-delay: 0.15s;') Twitter
     
             
-    h3 {{title}}
+    h3 {{occupation}}
     
     script(src="/assets/js/classie.js")
     script(src="/assets/js/pathLoader.js")
