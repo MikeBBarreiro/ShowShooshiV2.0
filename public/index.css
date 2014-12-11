@@ -26,25 +26,31 @@ svg {
 #toggle_userSearch {
   margin: 5px;
 }
-.changeOfHeart-contain {
-  width: 100%;
-  height: 45px;
-}
 #myModalLabel {
   color: black;
   text-align: center;
   font-family: 'Lato', sans-serif;
 }
+.modal-header {
+  background-color: #F43E48 !important;
+}
+.changeOfHeart-contain {
+  width: 100%;
+  height: 45px;
+  -webkit-animation-delay: 4s;
+}
 .mexican {
-  background-color: #5BB75B;
+  border: 1px solid black !important;
+  background-color: #4B6EEF;
   height: 70%;
   margin-left: 10%;
   margin-top: 1%;
 }
-.itilian {
-  background-color: #5BB75B;
+.italian {
+  border: 1px solid black !important;
+  background-color: #4B6EEF;
   height: 70%;
-  margin-left: 10%;
+  margin-left: 5%;
   margin-top: 1%;
 }
 #map {
@@ -75,9 +81,10 @@ svg {
   font-size: 10px;
 }
 /*width: 100%;*/
-@media screen and (max-width: 117px) {
-  .btn-success {
-    background-color: yellow !important;
+@media screen and (max-width: 1100px) {
+  .btn-danger {
+    background-color: #4B6EEF !important;
+    border-radius: 100px;
   }
 }
 #toggle_showshooshi {
