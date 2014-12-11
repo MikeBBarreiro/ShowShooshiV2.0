@@ -7,6 +7,7 @@ html(ng-app='mean-template', lang='en')
     title MEAN Template
     link(href='/vendor/bootstrap/dist/css/bootstrap.css', rel='stylesheet')
     link(href='/vendor/fontawesome/css/font-awesome.css', rel='stylesheet')
+    link(href='/assets/css/animate.css', rel='stylesheet')
     link(href='/index.css', rel='stylesheet')
     link(href='/views/home/home.css', rel='stylesheet')
     link(href='/assets/css/linkComponent.css' type='text/css' rel='stylesheet')
@@ -21,6 +22,16 @@ html(ng-app='mean-template', lang='en')
     //- include nav
     //- 
     //- #container(ng-view)
+    
+  
+    
+    //- button.btn.btn-primary(type='button', data-toggle='modal', data-target='.bs-example-modal-sm') Small modal
+    //- 
+    //- .modal.fade.bs-example-modal-sm(tabindex='-1', role='dialog', aria-labelledby='mySmallModalLabel', aria-hidden='true')
+    //-   .modal-dialog.modal-sm
+    //-     .modal-content 
+    //-       button.btn Yoyoyoy
+          
     #ip-container.ip-container
       // initial header
       .header-contain
@@ -45,8 +56,70 @@ html(ng-app='mean-template', lang='en')
       div.ip-main
         h2 Find a place to eat &nbsp;
           span.hue-color-wheel Sushi!
-        
-        
+        //- .row
+        //-   .col-xs-4
+        //-     input#lat1(ng-model='Lat1', type="hidden", name="lat")
+        //-     input#lng1(ng-model='Lng1', type="hidden", name="lng")
+        //-   .col-xs-4
+        //-     form(role='form', novalidate, ng-hide='hideMexican', name='mexicanForm')
+        //-       input.animated.fadeInLeft.form-control.input_userSearch#name1(type='text', name='name1', autofocus=true, placeholder='Enter A City Here!')
+        //-       button#toggle_userSearch.btn.btn-success.animated.fadeInRight(type='submit', data-hover="Hello") Search it
+        //-   .col-xs4
+        .changeOfHeart-contain    
+          button.mexican.btn-success.btn.wobble-horizontal(type='button', data-toggle='modal', data-target='.bs-example-modal-sm', ng-click='toggleMexican()') Mexican
+          button.itilian.btn-success.btn.wobble-horizontal(type='button', data-toggle='modal', data-target='.bs-example-modal-sm1', ng-click='toggleMexican()') Italian
+          
+          //- MODALS
+        .modal.fade.bs-example-modal-sm1(tabindex='-1', role='dialog', aria-labelledby='mySmallModalLabel', aria-hidden='true')
+          .modal-dialog.modal-sm
+            .modal-content
+              .modal-header
+                button.close(type='button', data-dismiss='modal')
+                  span(aria-hidden='true') ×
+                  span.sr-only Close
+                h4#myModalLabel.modal-title Ciao!
+              .row
+                .col-xs-12
+                  input#lat2(ng-model='Lat1', type="hidden", name="lat")
+                  input#lng2(ng-model='Lng1', type="hidden", name="lng")
+              .row
+                .col-xs-1
+                .col-xs-10
+                  form(role='form', novalidate, name='mexicanForm')
+                    input.animated.fadeInLeft.form-control.input_userSearch#name2(type='text', name='name1', autofocus=true, placeholder='Enter A City Here!')
+                    //- button#toggle_userSearch.btn.btn-success.animated.fadeInRight(type='submit', data-hover="Hello") Search it
+                .col-xs-1
+              .row
+                .col-xs-4
+                .col-xs-4
+                  button#toggle_userSearchItalian.btn.btn-success.animated.fadeInRight(type='submit', data-hover="Hello") Search it
+                .col-xs-4
+          
+        .modal.fade.bs-example-modal-sm(tabindex='-1', role='dialog', aria-labelledby='mySmallModalLabel', aria-hidden='true')
+          .modal-dialog.modal-sm
+            .modal-content
+              .modal-header
+                button.close(type='button', data-dismiss='modal')
+                  span(aria-hidden='true') ×
+                  span.sr-only Close
+                h4#myModalLabel.modal-title Hola!
+              .row
+                .col-xs-12
+                  input#lat1(ng-model='Lat1', type="hidden", name="lat")
+                  input#lng1(ng-model='Lng1', type="hidden", name="lng")
+              .row
+                .col-xs-1
+                .col-xs-10
+                  form(role='form', novalidate, name='mexicanForm')
+                    input.animated.fadeInLeft.form-control.input_userSearch#name1(type='text', name='name1', autofocus=true, placeholder='Enter A City Here!')
+                    //- button#toggle_userSearch.btn.btn-success.animated.fadeInRight(type='submit', data-hover="Hello") Search it
+                .col-xs-1
+              .row
+                .col-xs-4
+                .col-xs-4
+                  button#toggle_userSearch.btn.btn-success.animated.fadeInRight(type='submit', data-hover="Hello") Search it
+                .col-xs-4
+            
         
         #map.browser.clearfix
         
@@ -99,3 +172,5 @@ html(ng-app='mean-template', lang='en')
     script(src='/views/home/home.js')
     script(src='/components/home.js')
     script(src='/assets/js/geocode.js')
+    script(src='/assets/js/mexican.js')
+    script(src='/assets/js/italian.js')
