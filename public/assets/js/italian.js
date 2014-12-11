@@ -6,6 +6,9 @@
 
   $(document).ready(function(){
     $('#toggle_userSearchItalian').click(geocode);
+    $('#toggle_userSearchItalian').click(function(){
+      $(".Sushi").attr('src',"assets/img/italianShow.png");
+    });
   });
 
   var map,
