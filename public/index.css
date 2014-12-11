@@ -34,6 +34,9 @@ svg {
 .modal-header {
   background-color: #F43E48 !important;
 }
+.modal-content {
+  background-color: rgba(75, 110, 239, 0) !important;
+}
 .changeOfHeart-contain {
   width: 100%;
   height: 45px;

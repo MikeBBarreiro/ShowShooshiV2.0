@@ -8,7 +8,7 @@
     $('#toggle_userSearch').click(geocode);
     $('#toggle_userSearch').click(function(){
       var mexicanIcon = $(".Sushi").attr('src',"assets/img/yummmmmms.png");
-      mexicanIcon.addClass('animated fadeInDown');
+      mexicanIcon.addClass('animated zoomIn');
     });
   });
 
@@ -96,7 +96,6 @@
   //--------------weather_toggle_end-----------------------------\\
 
   function geocode(event){
-    alert('HEY!!!!');
     var geocoder = new google.maps.Geocoder(),
     name = $('#name1').val();
 

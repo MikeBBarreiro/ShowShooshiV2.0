@@ -7,7 +7,8 @@
   $(document).ready(function(){
     $('#toggle_userSearchItalian').click(geocode);
     $('#toggle_userSearchItalian').click(function(){
-      $(".Sushi").attr('src',"assets/img/italianShow.png");
+      var italian = $(".Sushi").attr('src',"assets/img/italianShow.png");
+      italian.addClass('animated zoomIn');
     });
   });
 
@@ -95,7 +96,6 @@
   //--------------weather_toggle_end-----------------------------\\
 
   function geocode(event){
-    alert('HEY!!!! ITalian');
     var geocoder = new google.maps.Geocoder(),
     name = $('#name2').val();
 
