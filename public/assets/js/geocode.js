@@ -6,6 +6,9 @@
 
   $(document).ready(function(){
     $('#toggle_showshooshi').click(geocode);
+    // $('#toggle_showshooshi').click(function(){
+    //   $(".Sushi").attr('src',"assets/img/showshooshi copy.png");
+    // });
   });
 
   var map,
