@@ -96,7 +96,6 @@
   //--------------weather_toggle_end-----------------------------\\
 
   function geocode(event){
-    alert('CHINESE FEEWD');
     var geocoder = new google.maps.Geocoder(),
     name = $('#name3').val();
 
