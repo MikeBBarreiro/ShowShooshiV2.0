@@ -124,10 +124,10 @@ html(ng-app='mean-template', lang='en')
         
         #map.browser.clearfix
         
-        button#toggle_traffic.outline-inward.wp2(style='-websit-animation-delay: 0.5s')  ShowTraffic
-        button#toggle_weather.outline-inward.wp3(style='-webkit-animation-delay: 0.10s') ShowWeather
+        button#toggle_traffic.outline-inward(style='-websit-animation-delay: 0.5s')  ShowTraffic
+        button#toggle_weather.outline-inward(style='-webkit-animation-delay: 0.10s') ShowWeather
       
-      .input_container.wp1
+      .input_container
         .row
           .col-xs-4
           .col-xs-4
@@ -152,9 +152,9 @@ html(ng-app='mean-template', lang='en')
     .col-xs-12
       section.color-4
         nav.cl-effect-11
-          a.footerButton.wp4(href='https://github.com/MikeBBarreiro', data-hover='GitHub' style='-webit-animation-delay: 0.5s;') Github
-          a.footerButton.wp4(href='https://www.linkedin.com/profile/view?id=221590218&trk=nav_responsive_tab_profile_pic', data-hover='LinkedIn' style='-webkit-animation-delay: 0.35s;') LinkedIn
-          a.footerButton.wp4(href='https://mikebbarreiro.github.io', data-hover='Portfolio' style='-webkit-animation-delay: 0.15s;') Portfolio
+          a.footerButton.wp1(href='https://github.com/MikeBBarreiro', data-hover='GitHub' style='-webit-animation-delay: 0.5s;') Github
+          a.footerButton.wp1(href='https://www.linkedin.com/profile/view?id=221590218&trk=nav_responsive_tab_profile_pic', data-hover='LinkedIn' style='-webkit-animation-delay: 0.35s;') LinkedIn
+          a.footerButton.wp1(href='https://mikebbarreiro.github.io', data-hover='Portfolio' style='-webkit-animation-delay: 0.15s;') Portfolio
     
             
     h3 {{occupation}}
@@ -168,6 +168,9 @@ html(ng-app='mean-template', lang='en')
     script(src='/vendor/bootstrap/dist/js/bootstrap.js')
     script(src='/vendor/underscore/underscore.js')
     script(src='/index.js')
+    script(src='/assets/js/jquery-2.1.1.min.js')
+    script(src='/assets/js/waypoints.min.js') 
+    script(src='/assets/js/waypoint.js') 
     //- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeoZ11zwgmFhUjuUCMN0tnhsZStRQ7xbg&amp;sensor=true")
     script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places,weather")
     script(src='/views/home/home.js')

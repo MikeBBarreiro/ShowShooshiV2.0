@@ -33,6 +33,7 @@ svg {
 }
 .modal-header {
   background-color: #F43E48 !important;
+  border-bottom: black;
 }
 .modal-content {
   background-color: rgba(75, 110, 239, 0) !important;
