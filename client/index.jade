@@ -35,7 +35,9 @@ html(ng-app='mean-template', lang='en')
     #ip-container.ip-container
       // initial header
       .header-contain
+        //- img.leaves(src='/assets/img/leaves.png')
         //- img.Sushi.ip-inner(src='/assets/img/showshooshi.png')
+      
       header.ip-header
         h1.ip-logo
           img.Sushi.ip-inner(src='/assets/img/ww1.png')
@@ -55,7 +57,7 @@ html(ng-app='mean-template', lang='en')
       // main content
       div.ip-main
         h2 Find a place to eat &nbsp;
-          span.hue-color-wheel {{occupation}}
+          span.hue-color-wheel {{food}}
         //- .row
         //-   .col-xs-4
         //-     input#lat1(ng-model='Lat1', type="hidden", name="lat")
@@ -66,11 +68,12 @@ html(ng-app='mean-template', lang='en')
         //-       button#toggle_userSearch.btn.btn-success.animated.fadeInRight(type='submit', data-hover="Hello") Search it
         //-   .col-xs4
         .changeOfHeart-contain.animated.flipInX    
-          button.mexican.btn-danger.btn.wobble-horizontal(type='button', data-toggle='modal', data-target='.bs-example-modal-sm', ng-click='toggleMexican()') Mexican
-          button.italian.btn-danger.btn.wobble-horizontal(type='button', data-toggle='modal', data-target='.bs-example-modal-sm1', ng-click='toggleMexican()') Italian
+          button.mexican.btn-danger.btn.wobble-horizontal(type='button', data-toggle='modal', data-target='.bs-example-modal-sm') Mexican
+          button.italian.btn-danger.btn.wobble-horizontal(type='button', data-toggle='modal', data-target='.bs-example-modal-sm1') Italian
+          button.chinese.btn-danger.btn.wobble-horizontal(type='button', data-toggle='modal', data-target='.bs-example-modal-sm2') Chinese
           
           //- MODALS
-          //Mexican
+          //Italian
         .modal.fade.bs-example-modal-sm1(tabindex='-1', role='dialog', aria-labelledby='mySmallModalLabel', aria-hidden='true')
           .modal-dialog.modal-sm
             .modal-content
@@ -95,7 +98,7 @@ html(ng-app='mean-template', lang='en')
                 .col-xs-4
                   button#toggle_userSearchItalian.btn.btn-success.animated.fadeInRight(type='submit', data-hover="Hello") Search it
                 .col-xs-4
-          //Italian
+          //Mexican
         .modal.fade.bs-example-modal-sm(tabindex='-1', role='dialog', aria-labelledby='mySmallModalLabel', aria-hidden='true')
           .modal-dialog.modal-sm
             .modal-content
@@ -120,12 +123,39 @@ html(ng-app='mean-template', lang='en')
                 .col-xs-4
                   button#toggle_userSearch.btn.btn-success.animated.fadeInRight(type='submit', data-hover="Hello") Search it
                 .col-xs-4
+        //Chinese
+        .modal.fade.bs-example-modal-sm2(tabindex='-1', role='dialog', aria-labelledby='mySmallModalLabel', aria-hidden='true')
+          .modal-dialog.modal-sm
+            .modal-content
+              .modal-header
+                button.close(type='button', data-dismiss='modal')
+                  span(aria-hidden='true') ×
+                  span.sr-only Close
+                h4#myModalLabel.modal-title Nín hǎo!
+              .row
+                .col-xs-12
+                    input#lat3(ng-model='Lat1', type="hidden", name="lat")
+                    input#lng3(ng-model='Lng1', type="hidden", name="lng")
+              .row
+                .col-xs-1
+                .col-xs-10
+                  form(role='form', novalidate, name='mexicanForm')
+                    input.animated.fadeInLeft.form-control.input_userSearch#name3(type='text', name='name1', autofocus=true, placeholder='在这里输入城市')
+                    //- button#toggle_userSearch.btn.btn-success.animated.fadeInRight(type='submit', data-hover="Hello") Search it
+                .col-xs-1
+              .row
+                .col-xs-4
+                .col-xs-4
+                  button#toggle_userSearchChinese.btn.btn-success.animated.fadeInRight(type='submit', data-hover="Hello") Search it
+                .col-xs-4
             
         
         #map.browser.clearfix
         
         button#toggle_traffic.outline-inward(style='-websit-animation-delay: 0.5s')  ShowTraffic
         button#toggle_weather.outline-inward(style='-webkit-animation-delay: 0.10s') ShowWeather
+        
+      
       
       .input_container
         .row
@@ -135,7 +165,7 @@ html(ng-app='mean-template', lang='en')
             input#lng(ng-model='Lng', type="hidden", name="lng")
             .row
               .col-xs-12
-                input.form-control#name(type='text', name='name', autofocus=true, placeholder='Enter A City Here!        町に入る')
+                input.form-control#name(type='text', name='name', autofocus=true, placeholder='Enter A City Here To Find Sushi!        町に入る')
             .row
               .col-xs-12
                 button#toggle_showshooshi.btn.btn-success(type='submit' data-hover="Hello") ShowShooshi!
@@ -157,7 +187,7 @@ html(ng-app='mean-template', lang='en')
           a.footerButton.wp1(href='https://mikebbarreiro.github.io', data-hover='Portfolio' style='-webkit-animation-delay: 0.15s;') Portfolio
     
             
-    h3 {{occupation}}
+    
     
     script(src="/assets/js/classie.js")
     script(src="/assets/js/pathLoader.js")
@@ -175,6 +205,7 @@ html(ng-app='mean-template', lang='en')
     script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places,weather")
     script(src='/views/home/home.js')
     script(src='/components/home.js')
-    script(src='/assets/js/geocode.js')
     script(src='/assets/js/mexican.js')
     script(src='/assets/js/italian.js')
+    script(src='/assets/js/chinese.js')
+    script(src='/assets/js/geocode.js')

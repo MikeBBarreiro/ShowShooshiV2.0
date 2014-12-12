@@ -4,7 +4,7 @@
   angular.module('mean-template')
   .controller('HomeCtrl', ['$scope', '$interval', 'Home', function($scope, $interval, Home){
 
-    var occupations = ['Sushi', 'Mexican', 'Italian'];
+    var foods = ['Sushi', 'Mexican', 'Italian', 'Chinese'];
 
     // $scope.title = 'ShowShooshi';
 
@@ -12,11 +12,11 @@
 
 
 
-    $scope.occupation = occupations[0];
+    $scope.food = foods[0];
     //$intervals are like a loop
     $interval(function(){
-      var rnd = Math.floor(Math.random() * occupations.length);
-      $scope.occupation = occupations[rnd];
-    }, 2500);
+      var rnd = Math.floor(Math.random() * foods.length);
+      $scope.food = foods[rnd];
+    }, 1000);
   }]);
 })();
