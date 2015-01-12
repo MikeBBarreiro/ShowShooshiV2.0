@@ -11,12 +11,11 @@
     // $scope.hideMexican = true;
 
 
-
     $scope.food = foods[0];
     //$intervals are like a loop
     $interval(function(){
       var rnd = Math.floor(Math.random() * foods.length);
       $scope.food = foods[rnd];
-    }, 1000);
+    }, 1500);
   }]);
 })();
